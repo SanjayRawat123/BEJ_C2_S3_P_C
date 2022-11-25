@@ -51,9 +51,9 @@ public class CustomerService implements ICustomerService{
 
     @Override
     public List<Customer> getCustomerByProductName(String productName) throws CustomerNotFoundException {
-        if(customerRepository.findAllCustomerFromProductName(productName).isEmpty()){
+        if(customerRepository.findAllCustomersFromProductName(productName).isEmpty()){
             throw new CustomerNotFoundException();
         }
-        return customerRepository.findAllCustomerFromProductName(productName);
+        return customerRepository.findAllCustomersFromProductName(productName);
     }
 }

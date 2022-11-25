@@ -18,7 +18,7 @@ import java.util.List;
 public interface CustomerRepository extends MongoRepository<Customer,Integer> {
 
     @Query("{'customerProduct.productName':{$in:[?0]}}")
-    List<Customer> findAllCustomerFromProductName(String productName);
+    List<Customer> findAllCustomersFromProductName(String productName);
 
 
 
